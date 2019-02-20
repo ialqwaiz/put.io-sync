@@ -1,7 +1,8 @@
 FROM hypriot/rpi-node
 
 RUN git clone https://github.com/ialqwaiz/put.io-sync.git
-RUN npm install put.io-sync
+WORKDIR put.io-sync
+RUN npm install .
 
 VOLUME /TV
 VOLUME /Movies
